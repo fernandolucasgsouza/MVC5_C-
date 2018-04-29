@@ -1,0 +1,41 @@
+﻿@model Introducao.Models.Pessoa
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Home - Index</h2>
+
+
+<h3>View Tipada - Model</h3>
+<P>@Model.PessoaId</P>
+<P>@Model.Nome</P>
+<P>@Model.Tipo</P>
+
+<fom action="Homme/Lista" method="POST">
+    <fieldset>
+        <legend>Infomações de Pessoa</legend>
+
+        <div>
+            <label for="PessoaId">Código:</label>
+        </div>
+        <div>
+            <input type="number" value="@Model.PessoaId" name="PessoaId" id="PessoaId" />
+        </div><br />
+        <div>
+            <label for="Nome">Nome:</label>
+        </div>
+        <div>
+            <input type="text" value="@Model.Nome" name="Nome" id="Nome" />
+        </div><br />
+        <div>
+            <label for="Tipo">Tipo:</label>&nbsp;
+        </div>
+        <div>
+            <input type="text" value="@Model.Tipo" name="Tipo" id="Tipo" />
+        </div><br />
+
+        <input type="submit" value="Enviar"/>
+    </fieldset>
+</fom>
+
+
