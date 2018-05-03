@@ -188,6 +188,7 @@
     <Content Include="Views\Contatos\Index.cshtml" />
     <Content Include="Views\Home\IndexViewData.cshtml" />
     <Content Include="Views\Home\IndexViewBag.cshtml" />
+    <Content Include="Views\Home\Lista.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

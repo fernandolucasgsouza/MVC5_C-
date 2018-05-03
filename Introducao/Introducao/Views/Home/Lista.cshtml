@@ -1,0 +1,40 @@
+﻿@model  Introducao.Models.Pessoa
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+
+<!-- ViewData
+<div>
+    <strong>Pessoa Id</strong>
+    <div>@ViewData["PessoaId"]</div>
+</div>
+<div>
+    <strong>Nome</strong>
+    <div>@ViewData["Nome"]</div>
+</div>
+<div>
+    <strong>Tipo</strong>
+    <div>@ViewData["Tipo"]</div>
+</div>
+-->
+
+<!-- Model -->
+<div>
+    <strong>@Html.LabelFor(x => x.PessoaId)</strong>
+    <div>@Model.PessoaId</div>
+</div>
+<div>
+    <strong>@Html.LabelFor(x => x.Nome)</strong>
+    <div>@Model.Nome</div>
+</div>
+<div>
+    <strong>@Html.LabelFor(x => x.Tipo)</strong>
+    <div>@Model.Tipo</div>
+</div>
+
+
+
+@Html.ActionLink("Voltar", "Index", "Home")

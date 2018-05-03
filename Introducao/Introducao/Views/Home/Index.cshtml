@@ -11,31 +11,31 @@
 <P>@Model.Nome</P>
 <P>@Model.Tipo</P>
 
-<fom action="Homme/Lista" method="POST">
+@using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+{
     <fieldset>
         <legend>Infomações de Pessoa</legend>
 
         <div>
-            <label for="PessoaId">Código:</label>
+            @Html.LabelFor(x => x.PessoaId)
         </div>
         <div>
-            <input type="number" value="@Model.PessoaId" name="PessoaId" id="PessoaId" />
+           @Html.EditorFor(x => x.PessoaId)
         </div><br />
         <div>
-            <label for="Nome">Nome:</label>
+            @Html.LabelFor(x => x.Nome)
         </div>
         <div>
-            <input type="text" value="@Model.Nome" name="Nome" id="Nome" />
+            @Html.EditorFor(x => x.Nome)
         </div><br />
         <div>
-            <label for="Tipo">Tipo:</label>&nbsp;
+            @Html.LabelFor(x => x.Tipo)&nbsp;
         </div>
         <div>
-            <input type="text" value="@Model.Tipo" name="Tipo" id="Tipo" />
+            @Html.EditorFor(x => x.Tipo)&nbsp;
         </div><br />
 
         <input type="submit" value="Enviar"/>
     </fieldset>
-</fom>
-
+}
 
