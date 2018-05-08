@@ -1,0 +1,49 @@
+﻿@model Introducao.Models.Usuario
+@{
+    ViewBag.Title = "Resultado Usuários";
+}
+
+<h2>Listar Dados Usuários - Resultado</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Usuário Cadastrado</legend>
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Nome)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayTextFor(model => model.Observacoes)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Idade)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayFor(model => model.Idade)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Email)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Login)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayFor(model => model.Login)
+        </div>
+        @Html.ActionLink("Voltar","Index")
+    </fieldset>
+}
+
