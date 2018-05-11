@@ -19,10 +19,14 @@ namespace Introducao.Controllers
         [HttpPost]
         public ActionResult Index(Usuario usuario)
         {
-            if (string.IsNullOrEmpty(usuario.Nome))
+            /*if (string.IsNullOrEmpty(usuario.Nome))
             {
                 ModelState.AddModelError("Nome", "O Campo 'Nome' é de preenchimento obrigatório");
             }
+            if (usuario.Senha != usuario.ConfirmaSenha)
+            {
+                ModelState.AddModelError("", "As senhas são diferentes");
+            }*/
             if (ModelState.IsValid)
             {
                 return View("Resultado", usuario);
