@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Introducao.Models
 {
@@ -20,13 +21,14 @@ namespace Introducao.Models
 
         [Required(ErrorMessage = "O Campo 'Login' é de preenchimento obrigatório")]
         [RegularExpression(@"[a-zA-Z]{5,15}", ErrorMessage = "O campo 'Login' deve ser preenchido somente com letras e com minimo de 5 a 15 caracteres")]
+        [Remote("LoginUnico", "Usuario", ErrorMessage ="Este login já existe")]
         public string Login { get; set; }
 
         [Required(ErrorMessage = "O Campo 'Senha' é de preenchimento obrigatório")]
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "O Campo 'Confirma Senha' é de preenchimento obrigatório")]
-        [Compare("Senha", ErrorMessage = "As senhas são diferentes")]
+        [System.ComponentModel.DataAnnotations.Compare("Senha", ErrorMessage = "As senhas são diferentes")]
         public string ConfirmaSenha { get; set; }
 
         [Required(ErrorMessage = "O Campo 'Observações' é de preenchimento obrigatório")]
